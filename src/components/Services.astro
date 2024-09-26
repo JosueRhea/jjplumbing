@@ -1,0 +1,50 @@
+---
+import Faucet from "../icons/faucet.astro";
+import Shower from "../icons/shower.astro";
+import Kitchen from "../icons/kitchen.astro";
+import Tools from "../icons/tools.astro";
+import Service from "./Service.astro";
+import bathImg from "../images/bath.jpg";
+import showerImg from "../images/shower.jpg";
+import kitchenImg from "../images/kitchen.jpg";
+import drainImg from "../images/drain.jpg";
+---
+
+<section class="bg-primary-100/10 w-full rounded-md py-4 px-2">
+  <div class="w-full mx-auto max-w-4xl">
+    <h3 class="text-3xl text-center">Our plumbing services</h3>
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-4 gap-2">
+      <Service
+        title="Repair and replacement"
+        description=`If you have any issue with your toilet, faucet,sink (Toilet leaking or
+          moving, faucet leaking or not working well, clogged sink). We can help
+          you`
+        img={bathImg}
+      >
+        <Faucet class={"w-8 h-8"} slot={"icon"} />
+      </Service>
+      <Service
+        title="Showers / tubs installations "
+        description=`Are you thinking about changing your tub or shower? We can help you. Your tub or shower is leaking or your drain is clogged. We are the best solution.`
+        img={showerImg}
+      >
+        <Shower class={"w-8 h-8"} slot={"icon"} />
+      </Service>
+      <Service
+        title="Kitchen installations"
+        description=`A description for this should be in here`
+        img={kitchenImg}
+      >
+        <Kitchen class={"w-8 h-8"} slot={"icon"} />
+      </Service>
+      <Service
+        title="Drain cleaning"
+        description=`If you have a clogged drain or sewer line! Your kitchen/sink/toilet & shower is not draining We can help you, water lines leaks Just call us`
+        img={drainImg}
+        isLast={true}
+      >
+        <Tools class={"w-8 h-8"} slot={"icon"} />
+      </Service>
+    </div>
+  </div>
+</section>

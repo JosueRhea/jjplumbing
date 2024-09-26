@@ -1,0 +1,28 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+const { title, description, img, isLast = false } = Astro.props;
+
+interface Props {
+  title: string;
+  description: string;
+  img: ImageMetadata;
+  isLast?: boolean;
+}
+---
+
+<article
+  class={`bg-white p-4 rounded-xl h-full flex flex-col justify-between ${isLast ? "xl:col-start-2" : ""}`}
+>
+  <section class="h-fit">
+    <header class="w-full mb-4">
+      <slot name="icon" />
+      <h2 class="text-lg">{title}</h2>
+    </header>
+    <p class="text-base text-primary-100">
+      {description}
+    </p>
+  </section>
+  <Image src={img} alt={title} width={400} class="w-full rounded-xl mt-2" />
+</article>

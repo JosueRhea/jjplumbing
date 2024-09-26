@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import ButtonLink from "./ButtonLink.astro";
+import headerImg1 from "../images/header-image-1.jpg";
+import headerImg2 from "../images/header-image-2.jpg";
+---
+
+<section class="grid grid-cols-1 sm:grid-cols-2 mx-auto max-w-4xl w-full px-2">
+  <div
+    class="w-full h-full flex justify-center items-center sm:items-start flex-col text-center sm:text-left mt-20 sm:mt-0"
+  >
+    <h2 class="font-semibold text-4xl sm:max-w-lg">
+      Expert Plumbing and Gas Solutions—Fast, Professional, Affordable
+    </h2>
+    <h3 class="text-primary-100">
+      Reliable Plumbing and Gas Services You Can Count On
+    </h3>
+    <footer
+      class="w-full mt-4 flex items-center justify-center sm:justify-start"
+    >
+      <ButtonLink href="#contact">Let's talk</ButtonLink>
+    </footer>
+  </div>
+  <div class="w-full grid grid-cols-2 py-32 px-4 sm:px-0">
+    <Image
+      src={headerImg2}
+      alt="JJ plumbing and gas"
+      width={400}
+      class="w-full translate-x-6 -rotate-12 rounded-xl shadow-xl hover:scale-110 transition-transform duration-200"
+    />
+    <Image
+      src={headerImg1}
+      alt="JJ plumbing and gas"
+      width={400}
+      class="w-full -translate-x-6 rotate-12 rounded-xl shadow-xl hover:scale-110 transition-transform duration-200"
+    />
+  </div>
+</section>
