@@ -1,0 +1,40 @@
+---
+import Form from "./Form.astro";
+import bath3 from "../images/bath3.png";
+import { Image } from "astro:assets";
+import Star from "../icons/star.astro";
+---
+
+<div class="w-full px-4">
+  <div
+    class="w-full mx-auto max-w-4xl mt-10 px-4 py-6 bg-primary-100/10 rounded-lg grid grid-cols-1 lg:grid-cols-2 gap-4"
+  >
+    <Form />
+    <div class="w-full lg:h-full min-h-96 relative">
+      <Image
+        width={1000}
+        height={1000}
+        src={bath3}
+        alt="bath"
+        class={"absolute inset-0 w-full h-full object-cover rounded-lg z-20"}
+      />
+      <div class="absolute bottom-4 left-0 right-0 z-30 w-full h-fit px-4">
+        <div
+          class="w-full bg-black/20 backdrop-blur-2xl p-4 rounded-lg text-white"
+        >
+          <!-- <div class="flex items-center">
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+          </div> -->
+          <p class="text-sm">
+            We are gonna be in touch with you as soon as possible.
+          </p>
+          <!-- <p class="text-sm mt-4"></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import kitchenImg2 from "../images/kitchen2.jpg";
+import bathroom2 from "../images/bathroom2.jpg";
+import laundryImg from "../images/laundry.jpg";
+---
+
+<section class="w-full mx-auto max-w-4xl mt-10 px-4 py-6 overflow-hidden" id="new-project">
+  <h3 class="text-center block text-4xl font-bold">New Project???</h3>
+  <p class="text-2xl text-center mt-4 text-primary-100">
+    If you have any projects that requires plumbing installation ( Bathrooms ,
+    Kitchens & laundry’s , we can help you.<span class="text-primary">
+      We provide you the best quality and faster solutions
+    </span>
+  </p>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+    <Image
+      src={kitchenImg2}
+      alt="kitchen"
+      width={600}
+      height={600}
+      class={"w-full aspect-video rounded-lg scale-100 -rotate-6 translate-x-3"}
+    />
+    <Image
+      src={bathroom2}
+      alt="Bath"
+      width={600}
+      height={600}
+      class={"w-full aspect-video rounded-lg scale-110 rotate-6 -translate-x-3"}
+    />
+    <Image
+      src={laundryImg}
+      alt="Laundry"
+      width={600}
+      height={600}
+      class={"w-full aspect-video rounded-lg scale-110 -rotate-6 translate-x-3"}
+    />
+  </div>
+</section>
