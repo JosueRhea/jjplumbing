@@ -26,6 +26,9 @@ export const server = {
         to: ["jjplumbing.gas@gmail.com"],
         subject: "JJ Plumbing Client",
         text: parsedText,
+        headers: {
+          "X-Entity-Ref-ID": crypto.randomUUID(),
+        },
       });
 
       return email;
